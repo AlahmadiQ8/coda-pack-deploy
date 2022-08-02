@@ -3327,7 +3327,9 @@ function run() {
                 error += data.toString();
             }
         };
-        yield exec.exec(`node dist/coda-cli upload ${pathToPackFile}`, [], options);
+        const runnerTempDirectory = process.env['RUNNER_TEMP'];
+        const pathToCodaCli = path.join(runnerTempDirectory, 'dist', 'coda-cli');
+        yield exec.exec(`node ${pathToCodaCli} upload ${pathToPackFile}`, [], options);
         // Remove file containing sensitive information just in case
         io.rmRF(codaConfigFilePath);
         console.log('---- HI ----');
