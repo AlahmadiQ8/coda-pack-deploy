@@ -3327,8 +3327,8 @@ function run() {
                 error += data.toString();
             }
         };
-        const runnerTempDirectory = process.env['RUNNER_TEMP'];
-        const pathToCodaCli = path.join(runnerTempDirectory, 'dist', 'coda-cli');
+        const runnerTempDirectory = process.cwd();
+        const pathToCodaCli = __nccwpck_require__.ab + "coda-cli";
         yield exec.exec(`node ${pathToCodaCli} upload ${pathToPackFile}`, [], options);
         // Remove file containing sensitive information just in case
         io.rmRF(codaConfigFilePath);

@@ -31,7 +31,7 @@ export async function run() {
     }
   };
 
-  const runnerTempDirectory = process.env['RUNNER_TEMP']; 
+  const runnerTempDirectory = process.cwd(); 
   const pathToCodaCli = path.join(runnerTempDirectory, 'dist', 'coda-cli')
   await exec.exec(`node ${pathToCodaCli} upload ${pathToPackFile}`, [], options)
 
