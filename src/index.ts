@@ -21,7 +21,7 @@ export async function run() {
 
   let output = '';
   let error = '';
-  let options: exec.ExecOptions;
+  let options: exec.ExecOptions = {};
   options.listeners = {
     stdout: (data: Buffer) => {
       output += data.toString();
