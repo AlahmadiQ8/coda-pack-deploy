@@ -3327,7 +3327,7 @@ function run() {
                 error += data.toString();
             }
         };
-        yield exec.exec(`npx coda upload ${pathToPackFile}`, [], options);
+        yield exec.exec(`node dist/coda-cli upload ${pathToPackFile}`, [], options);
         // Remove file containing sensitive information just in case
         io.rmRF(codaConfigFilePath);
         console.log('---- HI ----');

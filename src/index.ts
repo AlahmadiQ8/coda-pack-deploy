@@ -31,7 +31,7 @@ export async function run() {
     }
   };
 
-  await exec.exec(`npx coda upload ${pathToPackFile}`, [], options)
+  await exec.exec(`node dist/coda-cli upload ${pathToPackFile}`, [], options)
 
   // Remove file containing sensitive information just in case
   io.rmRF(codaConfigFilePath);

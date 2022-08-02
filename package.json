@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc --rootDir ./src",
     "pack": "ncc build src/index.js --license licenses.txt",
-    "all": "npm run build && npm run pack"
+    "pack-coda-cli": "ncc build ./node_modules/.bin/coda -o dist/coda-cli",
+    "all": "npm run build && npm run pack && npm run pack-coda-cli"
   },
   "repository": {
     "type": "git",
