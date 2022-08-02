@@ -3318,7 +3318,7 @@ function run() {
         fs.writeFileSync(codaConfigFilePath, JSON.stringify(codaConfig));
         let output = '';
         let error = '';
-        let options;
+        let options = {};
         options.listeners = {
             stdout: (data) => {
                 output += data.toString();
