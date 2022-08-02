@@ -3329,7 +3329,7 @@ function run() {
         };
         const runnerTempDirectory = process.cwd();
         const pathToCodaCli = __nccwpck_require__.ab + "coda-cli";
-        yield exec.exec(`node ${pathToCodaCli} upload ${pathToPackFile}`, [], options);
+        yield exec.exec(`node ${pathToCodaCli} upload`, [pathToPackFile], options);
         // Remove file containing sensitive information just in case
         io.rmRF(codaConfigFilePath);
         console.log('---- HI ----');

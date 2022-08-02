@@ -33,7 +33,7 @@ export async function run() {
 
   const runnerTempDirectory = process.cwd(); 
   const pathToCodaCli = path.join(runnerTempDirectory, 'dist', 'coda-cli')
-  await exec.exec(`node ${pathToCodaCli} upload ${pathToPackFile}`, [], options)
+  await exec.exec(`node ${pathToCodaCli} upload`, [pathToPackFile], options)
 
   // Remove file containing sensitive information just in case
   io.rmRF(codaConfigFilePath);
