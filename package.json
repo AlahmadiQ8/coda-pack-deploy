@@ -24,6 +24,8 @@
   "homepage": "https://github.com/AlahmadiQ8/coda-pack-deploy#readme",
   "dependencies": {
     "@actions/core": "^1.9.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/io": "^1.1.2",
     "@codahq/packs-sdk": "^1.0.2"
   },
   "devDependencies": {
