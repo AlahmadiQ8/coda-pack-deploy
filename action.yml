@@ -1,0 +1,14 @@
+name: 'Coda Pack Deploy'
+description: 'Deploy coda pack'
+inputs:
+  path-to-pack-dot-ts:  
+    description: 'Path to pack.ts file'
+    required: true
+    default: './pack.ts'
+  coda-api-token:
+    description: 'Coda API token'
+    required: true
+    default: ''
+runs:
+  using: 'node16'
+  main: 'index.js'
